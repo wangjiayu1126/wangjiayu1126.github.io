@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/link/index.html</loc>
+    <loc>https://wangjiayu1126.github.io/link/index.html</loc>
     
     <lastmod>2022-07-26</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://wangjiayu1126.github.io/categories/index.html</loc>
     
     <lastmod>2022-07-26</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://wangjiayu1126.github.io/tags/index.html</loc>
     
     <lastmod>2022-07-26</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/07/25/%E7%AC%AC%E4%BA%8C%E7%AF%87%20/</loc>
+    <loc>https://wangjiayu1126.github.io/archives/73626faf.html</loc>
     
     <lastmod>2022-07-25</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/07/25/%E7%AC%AC%E4%B8%80%E7%AF%87/</loc>
+    <loc>https://wangjiayu1126.github.io/archives/73626faf.html</loc>
     
     <lastmod>2022-07-25</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/07/15/hello-world/</loc>
+    <loc>https://wangjiayu1126.github.io/archives/13337a20.html</loc>
     
     <lastmod>2022-07-15</lastmod>
     
@@ -57,7 +57,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://wangjiayu1126.github.io/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -65,28 +65,28 @@
 
   
   <url>
-    <loc>http://example.com/tags/test/</loc>
+    <loc>https://wangjiayu1126.github.io/tags/test/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://wangjiayu1126.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/tags/</loc>
+    <loc>https://wangjiayu1126.github.io/tags/tags/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/sss/</loc>
+    <loc>https://wangjiayu1126.github.io/tags/sss/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -95,14 +95,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/java/</loc>
+    <loc>https://wangjiayu1126.github.io/categories/java/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/java/MySQL/</loc>
+    <loc>https://wangjiayu1126.github.io/categories/java/MySQL/</loc>
     <lastmod>2022-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
