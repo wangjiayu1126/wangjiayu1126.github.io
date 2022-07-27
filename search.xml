@@ -4,31 +4,25 @@
   
     
     <entry>
-      <title>第一篇</title>
-      <link href="/archives/73626faf.html"/>
-      <url>/archives/73626faf.html</url>
+      <title>热题100-链表</title>
+      <link href="/archives/1cfb4a7b.html"/>
+      <url>/archives/1cfb4a7b.html</url>
       
-        <content type="html"><![CDATA[<h3 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="两数相加"><a href="#两数相加" class="headerlink" title="两数相加"></a>两数相加</h3><p>给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。请你将两个数相加，并以相同形式返回一个表示和的链表。你可以假设除了数字 0 之外，这两个数都不会以 0 开头<br>链接：<a href="https://leetcode.cn/problems/add-two-numbers">https://leetcode.cn/problems/add-two-numbers</a></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> &#123;</span><br><span class="line">        <span class="comment">// 哑结点</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">dummyHead</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>();</span><br><span class="line">        <span class="comment">// 尾指针</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">tail</span> <span class="operator">=</span> dummyHead;</span><br><span class="line">        <span class="comment">// 进位</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">carry</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 只要l1上有数或者l2上有数或者进位不为0就要继续算下去</span></span><br><span class="line">        <span class="keyword">while</span> (l1 != <span class="literal">null</span> || l2 != <span class="literal">null</span> || carry != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// 求l1上的数data1</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">data1</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (l1 != <span class="literal">null</span>) &#123;</span><br><span class="line">                data1 = l1.val;</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 求l2上的数data2</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">data2</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (l2 != <span class="literal">null</span>) &#123;</span><br><span class="line">                data2 = l2.val;</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 将三个数的总和累加到data1上</span></span><br><span class="line">            data1 += data2 + carry;</span><br><span class="line">            <span class="comment">// 进位</span></span><br><span class="line">            carry = data1 / <span class="number">10</span>;</span><br><span class="line">            <span class="comment">// 当前位的结果</span></span><br><span class="line">            data1 %= <span class="number">10</span>;    </span><br><span class="line">            <span class="comment">// 创建新结点  </span></span><br><span class="line">            <span class="type">ListNode</span> <span class="variable">newNode</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(data1); </span><br><span class="line">            <span class="comment">// 新结点插到最后</span></span><br><span class="line">            tail.next = newNode;</span><br><span class="line">            tail = newNode;  </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummyHead.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> java </category>
+          <category> 热题100 </category>
           
-          <category> MySQL </category>
+          <category> 链表 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> test </tag>
-            
-            <tag> 博客搭建 </tag>
-            
-            <tag> tags </tag>
-            
-            <tag> sss </tag>
+            <tag> 链表 </tag>
             
         </tags>
       
@@ -37,27 +31,79 @@
     
     
     <entry>
-      <title>第一篇</title>
-      <link href="/archives/73626faf.html"/>
-      <url>/archives/73626faf.html</url>
+      <title>热题100-滑动窗口</title>
+      <link href="/archives/6e5df69f.html"/>
+      <url>/archives/6e5df69f.html</url>
       
-        <content type="html"><![CDATA[<h3 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="找到字符串中所有字母异位词"><a href="#找到字符串中所有字母异位词" class="headerlink" title="找到字符串中所有字母异位词"></a>找到字符串中所有字母异位词</h3><p>给定两个字符串 s 和 p，找到 s 中所有 p 的 异位词 的子串，返回这些子串的起始索引。不考虑答案输出的顺序。</p><p>异位词 指由相同字母重排列形成的字符串（包括相同的字符串）。<br>链接：<a href="https://leetcode.cn/problems/find-all-anagrams-in-a-string">https://leetcode.cn/problems/find-all-anagrams-in-a-string</a></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">findAnagrams</span><span class="params">(String s, String p)</span> &#123;</span><br><span class="line">        HashMap&lt;Character, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> c : p.toCharArray()) &#123;</span><br><span class="line">            map.put(c, map.getOrDefault(c,<span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> map.size();</span><br><span class="line">        <span class="type">int</span> <span class="variable">satisfy</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>, j = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">add</span> <span class="operator">=</span> s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(add)) &#123;</span><br><span class="line">                map.put(add, map.get(add) - <span class="number">1</span>);</span><br><span class="line">                <span class="keyword">if</span> (map.get(add) == <span class="number">0</span>) &#123;</span><br><span class="line">                    satisfy++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i - j + <span class="number">1</span> &gt; p.length()) &#123;</span><br><span class="line">                <span class="type">char</span> <span class="variable">delete</span> <span class="operator">=</span> s.charAt(j);</span><br><span class="line">                <span class="keyword">if</span> (map.containsKey(delete)) &#123;</span><br><span class="line">                    map.put(delete, map.get(delete) + <span class="number">1</span>);</span><br><span class="line">                    <span class="keyword">if</span> (map.get(delete) == <span class="number">1</span>) &#123;</span><br><span class="line">                        satisfy--;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (satisfy == cnt) &#123;</span><br><span class="line">                res.add(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="无重复字符的最长子串"><a href="#无重复字符的最长子串" class="headerlink" title="无重复字符的最长子串"></a>无重复字符的最长子串</h3><p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p><p>链接：<a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/">https://leetcode.cn/problems/longest-substring-without-repeating-characters/</a></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">lengthOfLongestSubstring</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="comment">// set存储窗口中的字符</span></span><br><span class="line">        HashSet&lt;Character&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 统计每一个以 s[j] 结尾的不含重复字符的子串的长度，并不断取最大值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>, i = <span class="number">0</span>; j &lt; s.length(); j++) &#123;</span><br><span class="line">            <span class="comment">// 如果现在有和s[j]相同的字符，则不断增大窗口的起点</span></span><br><span class="line">            <span class="keyword">while</span> (set.contains(s.charAt(j))) &#123;</span><br><span class="line">                set.remove(s.charAt(i++));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 没有重复的则可以加入s[j]</span></span><br><span class="line">            set.add(s.charAt(j));</span><br><span class="line">            <span class="comment">// 取最大值</span></span><br><span class="line">            res = Math.max(res, j-i+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> java </category>
+          <category> 热题100 </category>
+          
+          <category> 滑动窗口 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> test </tag>
+            <tag> 滑动窗口 </tag>
             
-            <tag> 博客搭建 </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>热题100-哈希表</title>
+      <link href="/archives/9c4548f6.html"/>
+      <url>/archives/9c4548f6.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h3><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</p><p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。<br>链接：<a href="https://leetcode.cn/problems/two-sum">https://leetcode.cn/problems/two-sum</a></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] twoSum(<span class="type">int</span>[] nums, <span class="type">int</span> target) &#123;</span><br><span class="line">        <span class="comment">// hash表记录值和下标的对应关系</span></span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="comment">// 判断这个之前有没有数加上当前的数等于target</span></span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(target - nums[i])) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;map.get(target - nums[i]), i&#125;;</span><br><span class="line">            &#125;            </span><br><span class="line">            <span class="comment">// 将这个数加入hash表中</span></span><br><span class="line">            map.put(nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 热题100 </category>
+          
+          <category> 哈希表 </category>
+          
+      </categories>
+      
+      
+        <tags>
             
-            <tag> tags </tag>
+            <tag> 哈希表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>热题100-动态规划</title>
+      <link href="/archives/a80d0031.html"/>
+      <url>/archives/a80d0031.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="最长回文子串"><a href="#最长回文子串" class="headerlink" title="最长回文子串"></a>最长回文子串</h3><p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的回文子串。</p><p>链接：<a href="https://leetcode.cn/problems/convert-bst-to-greater-tree">https://leetcode.cn/problems/convert-bst-to-greater-tree</a></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">longestPalindrome</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="type">String</span> <span class="variable">res</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="type">boolean</span>[][] dp = <span class="keyword">new</span> <span class="title class_">boolean</span>[n][n];</span><br><span class="line">        <span class="comment">// 因为 dp[i][j] 用到了 dp[i+1][j-1]的状态，所以i要先有大的，j要先有小的</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> n-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="comment">// s[i][j] 为回文串的条件，s[i] = s[j],并且内层s[i+1][j-1]为回文串</span></span><br><span class="line">                <span class="keyword">if</span> (s.charAt(i) == s.charAt(j)) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (i+<span class="number">1</span> &gt; j-<span class="number">1</span> || dp[i+<span class="number">1</span>][j-<span class="number">1</span>]) &#123;</span><br><span class="line">                        dp[i][j] = <span class="literal">true</span>;</span><br><span class="line">                        <span class="keyword">if</span> (j-i+<span class="number">1</span> &gt; res.length()) &#123;</span><br><span class="line">                            res = s.substring(i, j + <span class="number">1</span>);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 热题100 </category>
+          
+          <category> 动态规划 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 动态规划 </tag>
             
         </tags>
       
