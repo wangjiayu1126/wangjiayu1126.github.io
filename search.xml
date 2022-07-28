@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Java开发框架-项目构建Maven</title>
+      <link href="/archives/c35c5deb.html"/>
+      <url>/archives/c35c5deb.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Maven的作用"><a href="#Maven的作用" class="headerlink" title="Maven的作用"></a>Maven的作用</h2><ol><li>项目构建：提供标准的、跨平台的自动化项目构建方式</li><li>依赖管理：管理项目依赖的资源（jar包）</li><li>统一开发结构：提供统一的项目结构</li></ol><h2 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h2><p>仓库就是用来存储项目的（一个项目中可能会有多个jar包）</p><p>仓库分类：</p><ul><li>本地仓库，自己电脑上的仓库，连接远程仓库获取jar包</li><li>远程仓库：<ul><li>中央仓库：Maven团队维护的仓库</li><li>私服：公司的仓库，可能有自己公司做的jar包，不对外开放</li></ul></li></ul><h2 id="坐标"><a href="#坐标" class="headerlink" title="坐标"></a>坐标</h2><p>坐标就是描述项目在哪的</p><p>坐标的组成：</p><ul><li>groupId: 项目属于的组织</li><li>artifactId: 当前项目的名称</li><li>version: 版本号</li></ul><h2 id="配置仓库"><a href="#配置仓库" class="headerlink" title="配置仓库"></a>配置仓库</h2><h3 id="配置本地仓库"><a href="#配置本地仓库" class="headerlink" title="配置本地仓库"></a>配置本地仓库</h3><p>在conf文件夹中修改settings.xml文件，在其中添加</p><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/mvnrep<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="配置远程仓库"><a href="#配置远程仓库" class="headerlink" title="配置远程仓库"></a>配置远程仓库</h3><p>在conf文件夹中修改settings.xml文件，在其中添加</p><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Maven工程目录结构"><a href="#Maven工程目录结构" class="headerlink" title="Maven工程目录结构"></a>Maven工程目录结构</h2><ul><li>project<ul><li>src<ul><li>main<ul><li>java</li><li>resources</li></ul></li><li>test<ul><li>java</li><li>resources</li></ul></li></ul></li><li>pom.xml</li></ul></li></ul><h2 id="Maven项目构建命令"><a href="#Maven项目构建命令" class="headerlink" title="Maven项目构建命令"></a>Maven项目构建命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mvn compile     # 编译</span><br><span class="line">mvn clean       # 清理</span><br><span class="line">mvn test        # 测试</span><br><span class="line">mvn package     # 打包</span><br><span class="line">mvn install     # 安装到本地仓库</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java开发框架 </category>
+          
+          <category> 项目构建Maven </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>热题100-栈</title>
       <link href="/archives/15f2ab9e.html"/>
       <url>/archives/15f2ab9e.html</url>
@@ -212,35 +239,6 @@
         <tags>
             
             <tag> 动态规划 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>还就那个成功</title>
-      <link href="/archives/13337a20.html"/>
-      <url>/archives/13337a20.html</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> test </tag>
-            
-            <tag> 博客搭建 </tag>
-            
-            <tag> tags </tag>
             
         </tags>
       
